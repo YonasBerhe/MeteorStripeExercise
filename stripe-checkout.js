@@ -4,7 +4,7 @@ if (Meteor.isClient) {
           e.preventDefault();
 
           StripeCheckout.open({
-            key: 'sk_test_SPVzieat8HCaKQI0gRqC1yPj',
+            key: 'sk_test_izpAg2QeRKSokhNiGiK5oMyl',
             amount: 5000, // this is equivalent to $50
             name: 'Meteor Tutorial',
             description: 'On how to use Stripe ($50.00)',
@@ -23,7 +23,7 @@ if (Meteor.isClient) {
       Meteor.methods({
         'chargeCard': function(stripeToken) {
           check(stripeToken, String);
-          var Stripe = StripeAPI('sk_live_0uhv8KV40NCe79pJDtTWejWD');
+          var Stripe = StripeAPI('pk_test_58ext5snmeYUgpGEDuvzRfxs');
 
           Stripe.charges.create({
             source: stripeToken,
